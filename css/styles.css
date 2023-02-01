@@ -238,9 +238,22 @@ body {
 
 .nav-item,
 .nav-contacts {
+  position: relative;
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+.nav-item.current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-link-txt-cl);
+  border-radius: 2px;
 }
 
 .header-contacts {
